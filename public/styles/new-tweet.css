@@ -19,6 +19,13 @@
   height: 50px;
   margin-bottom: 20px;
   padding: 30px 0px 0px 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#tweet-text:focus {
+  outline: none;
+  overflow: hidden;
 }
 
 .counter, .tweet-button {
