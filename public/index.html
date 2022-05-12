@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +38,7 @@
   <nav class="nav">
     <span id="nav-heading-text" class="nav-items">tweeter</span>
     <div class="nav-items"> <span><b>Write</b> a new tweet</span>
-      <a class="links" href="#"><i class="fa-solid fa-angles-down"></i></a>
+      <a class="links" href="#"><i class="fa-solid fa-angles-down fa-bounce"></i></a>
     </div>
   </nav>
   <header id="header">
@@ -58,9 +59,29 @@
         <div class="button-counter-container">
           <button class="tweet-button" type="submit">Tweet</button>
           <output name="counter" class="counter" id="charCounter" for="tweet-text">140</output>
-          </div>
+        </div>
       </form>
     </section>
+
+    <article class="tweet-container">
+      <header>
+        <div>
+          <i class="fa-solid fa-mosquito"></i>
+          <span>Ronda Phillipa</span>
+        </div>
+        <p class="user-id">@babyClownsAreAwesome</p>
+      </header>
+      <p class="tweet-text-log">I adore clowns more than I should.</p>
+      <footer>
+        <time>15 days ago</time>
+        <div class="interaction-icons-container">
+          <a href="#"><i class="flag-icon fa-solid fa-flag"></i></a>
+          <a href="#"><i class="retweet-icon fa-solid fa-retweet"></i></i></a>
+          <a href="#"><i class="heart-icon fa-solid fa-heart"></i></i></a>
+        </div>
+      </footer>
+    </article>
+
   </main>
 </body>
 

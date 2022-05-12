@@ -9,7 +9,8 @@
 }
 
 #tweet-text {
-  border-bottom: 5px solid #545149;
+  border-bottom: 3px solid #545149;
+  color: #545149;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
@@ -37,4 +38,8 @@
   color: white;
   border: none;
   padding: 6px;
+}
+
+#tweet-question{
+  font-size: 18px;
 }

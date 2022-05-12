@@ -4,3 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// $(".links").click(()=>{
+//   $(this).animate({left: '250px'});
+// });
+

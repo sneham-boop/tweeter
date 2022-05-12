@@ -17,7 +17,9 @@
 
 .links {
   color: #ffffff;
+  padding-top: 10px;
 }
+
 
 .nav-items {
   display: flex;
