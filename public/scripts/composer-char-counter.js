@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  // Function implementation for tweet character counter
   $("#tweet-text").keyup(function () {
     const typedText = $(this).val();
     const numChars = 140 - typedText.length;

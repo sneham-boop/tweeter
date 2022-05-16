@@ -39,6 +39,7 @@
   border: none;
   padding: 6px;
   border-radius: 10px;
+  transition: 0.4s;
 }
 
 .tweet-button:hover {
