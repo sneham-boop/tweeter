@@ -1,4 +1,4 @@
-.tweet-container {
+.single-tweet {
   margin-top: 20px;
   padding: 20px;
   display: flex;
@@ -7,13 +7,13 @@
   font-size: 18px;
 }
 
-.tweet-container:hover {
+.single-tweet:hover {
   box-shadow: 7px 7px gainsboro;
 }
 
-.tweet-container header,
-.tweet-container footer,
-.tweet-container p {
+.single-tweet header,
+.single-tweet footer,
+.single-tweet p {
   display: flex;
   justify-content: space-between;
 }
@@ -49,6 +49,6 @@ time {
   font-size: 10px;
 }
 
-.tweet-container footer {
+.single-tweet footer {
   padding: 0px 10px 0px 10px;
 }

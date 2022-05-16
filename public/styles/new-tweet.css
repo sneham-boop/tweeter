@@ -40,6 +40,10 @@
   padding: 6px;
 }
 
+.tweet-button:hover {
+  background-color: #d4a71e;
+}
+
 #tweet-question{
   font-size: 18px;
 }
