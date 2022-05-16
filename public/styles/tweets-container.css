@@ -7,20 +7,35 @@
   font-size: 18px;
 }
 
-.single-tweet:hover {
-  box-shadow: 7px 7px gainsboro;
-}
-
 .single-tweet header,
 .single-tweet footer,
 .single-tweet p {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.single-tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+.single-tweet img {
+  width: 2em;
+  margin-right: 15px;
+}
+
+.single-tweet footer {
+  padding: 0px 10px 0px 10px;
+}
+
+.single-tweet:hover {
+  box-shadow: 7px 7px gainsboro;
 }
 
 .user-id {
-  margin: 0px; 
-  color: gray;
+  margin: 0px;
+  color: rgb(181, 181, 181);
   font-weight: bold;
 }
 
@@ -28,10 +43,11 @@
   margin: 20px 0px 5px 0px;
   border-bottom: 3px solid #545149;
   padding-bottom: 10px;
+  font-weight: 600;
 }
 
 .interaction-icons-container a {
-  color:#4056a1;
+  color: #4056a1;
 }
 .flag-icon:hover,
 .retweet-icon:hover,
@@ -47,8 +63,4 @@
 time {
   font-weight: bold;
   font-size: 10px;
-}
-
-.single-tweet footer {
-  padding: 0px 10px 0px 10px;
 }
