@@ -29,4 +29,8 @@
   align-items: center;
 }
 
+.nav-items p {
+  margin: 0px;
+}
+
 

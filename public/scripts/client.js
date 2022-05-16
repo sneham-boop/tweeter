@@ -45,15 +45,15 @@ $(document).ready(() => {
           <img src="${user.avatars}">
           <span>${user.name}</span>
         </div>
-        <p class="user-id">${user.handle}</p>
+        <p class="user-id bold">${user.handle}</p>
       </header>
-      <p class="tweet-text-log">${content.text}</p>
+      <p class="tweet-text-log bold">${content.text}</p>
       <footer>
-        <time>${tweetObj.created_at}</time>
+        <time class="bold">${tweetObj.created_at}</time>
         <div class="interaction-icons-container">
-          <a href="#"><i class="flag-icon fa-solid fa-flag"></i></a>
-          <a href="#"><i class="retweet-icon fa-solid fa-retweet"></i></i></a>
-          <a href="#"><i class="heart-icon fa-solid fa-heart"></i></i></a>
+          <a href="#"><i class="flag-icon fa-solid fa-flag fa-2xs"></i></a>
+          <a href="#"><i class="retweet-icon fa-solid fa-retweet fa-2xs"></i></i></a>
+          <a href="#"><i class="heart-icon fa-solid fa-heart fa-2xs"></i></i></a>
         </div>
       </footer>
     </article>`;

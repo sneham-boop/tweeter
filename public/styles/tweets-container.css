@@ -1,6 +1,6 @@
 .single-tweet {
   margin-top: 20px;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   display: flex;
   flex-direction: column;
   border: 3px solid;
@@ -36,14 +36,12 @@
 .user-id {
   margin: 0px;
   color: rgb(181, 181, 181);
-  font-weight: bold;
 }
 
 .tweet-text-log {
   margin: 20px 0px 5px 0px;
   border-bottom: 3px solid #545149;
   padding-bottom: 10px;
-  font-weight: 600;
 }
 
 .interaction-icons-container a {
@@ -61,6 +59,5 @@
 }
 
 time {
-  font-weight: bold;
   font-size: 10px;
 }

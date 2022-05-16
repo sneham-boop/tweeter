@@ -17,10 +17,9 @@
 
 #name-text {
   font-size: 30px;
-  font-weight: 600;
   margin: 10px 0px 20px 0px;
 }
 
-#lastname {
-  font-weight: 100
+.bold {
+  font-weight: 600;
 }
