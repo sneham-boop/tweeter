@@ -55,9 +55,18 @@ $(document).ready(() => {
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const data = $(this).serialize();
+
+    // Validation
+    if(data.length <= 5) return alert("There was no tweet entered. Enter something!");
+    if(data.length > 145) return alert("This string is too long. Shorten to 140 characters.");
+
     $.post("/tweets", data).done(() => {
       loadTweets();
-      $("#tweet-text").val(""); // Clear tweet form
+
+      // Reset tweet form
+      const counter = "#tweet-text + div output";
+      $("#tweet-text").val(""); 
+      $(counter).text("140");
     });
     
   });
