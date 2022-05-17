@@ -1,0 +1,24 @@
+#footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer a {
+  text-decoration: none;
+  text-align: center;
+  background-color: #4056a1;
+  color: white;
+  border: none;
+  padding: 6px;
+  width: 95px;
+  font-family: "Bungee", sans-serif;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+#footer a:hover {
+  background-color: #d4a71e;
+}
