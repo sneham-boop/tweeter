@@ -5,8 +5,11 @@
  */
 
 $(document).ready(() => {
-  $(".tweet-form").on("submit", (event) => {
+  $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
+    console.log($(this).serialize().slice(5));
+    const data = $(this).serialize();
+    $.post("/tweets", data);
   });
 
   const data = [
@@ -34,9 +37,9 @@ $(document).ready(() => {
     },
   ];
 
-  const createTweetElement = (tweetObj) => {
-    const user = tweetObj.user;
-    const content = tweetObj.content;
+  const createTweetElement = (tweetData) => {
+    const user = tweetData.user;
+    const content = tweetData.content;
 
     const $tweetElement = `
     <article class="single-tweet">
@@ -49,7 +52,7 @@ $(document).ready(() => {
       </header>
       <p class="tweet-text-log bold">${content.text}</p>
       <footer>
-        <time class="bold">${tweetObj.created_at}</time>
+        <time class="bold">${tweetData.created_at}</time>
         <div class="interaction-icons-container">
           <a href="#"><i class="flag-icon fa-solid fa-flag fa-2xs"></i></a>
           <a href="#"><i class="retweet-icon fa-solid fa-retweet fa-2xs"></i></i></a>
