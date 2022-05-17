@@ -28,7 +28,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -45,12 +47,8 @@
     </div>
   </nav>
   <header id="header">
-    <div>
-      <img id="profile-picture" src="/images/profile-hex.png">
-    </div>
-    <div>
-      <p id="name-text"><span class="bold">Sneha </span>Mahajan</p>
-    </div>
+    <img id="profile-picture" src="/images/profile-hex.png">
+    <p id="name-text"><span class="bold">Sneha </span>Mahajan</p>
   </header>
 
   <!-- Page-specific (main) content here -->
@@ -65,10 +63,11 @@
         </div>
       </form>
     </section>
-    <div id="tweets-container"></div>
+    <section id="tweets-container"></section>
   </main>
   <footer id="footer">
-    <a href="#name-text">Go up</a>
+    <a href="#profile-picture">Go up</a>
   </footer>
 </body>
+
 </html>

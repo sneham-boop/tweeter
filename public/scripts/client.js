@@ -26,14 +26,14 @@ $(document).ready(() => {
         <time class="bold">${timeago.format(time)}</time>
         <div class="interaction-icons-container">
           <a href="#"><i class="flag-icon fa-solid fa-flag fa-2xs"></i></a>
-          <a href="#"><i class="retweet-icon fa-solid fa-retweet fa-2xs"></i></i></a>
-          <a href="#"><i class="heart-icon fa-solid fa-heart fa-2xs"></i></i></a>
+          <a href="#"><i class="retweet-icon fa-solid fa-retweet fa-2xs"></i></a>
+          <a><i class="heart-icon fa-solid fa-heart fa-2xs"></i> </a>
         </div>
       </footer>
     </article>`;
     return $tweetElement;
   };
-
+  
   // Render all tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
