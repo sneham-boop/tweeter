@@ -5,6 +5,8 @@
  */
 
 $(document).ready(() => {
+
+  // Create tweet container html
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const content = tweetData.content;
@@ -32,27 +34,34 @@ $(document).ready(() => {
     return $tweetElement;
   };
 
+  // Render all tweets
   const renderTweets = (tweets) => {
-    // console.log(tweets);
-    tweets.forEach((tweetData) => {
-      const $tweet = createTweetElement(tweetData);
-      $("#tweets-container").append($tweet);
-    });
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $("#tweets-container").prepend($tweet);
+    }
   };
 
+  // Get all existing tweets from db
   const loadTweets = () => {
-    $.getJSON("/tweets", function (data) {
-    })
-    .done(function (data) {
-      renderTweets(data)
+    $.getJSON("/tweets").done(function (tweets) {
+      // Remove old dataset and replace with newest
+      $("#tweets-container").empty();
+      renderTweets(tweets);
     });
   };
-  
 
+  // New tweet
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const data = $(this).serialize();
-    $.post("/tweets", data);
+    $.post("/tweets", data).done(() => {
+      loadTweets();
+      $("#tweet-text").val(""); // Clear tweet form
+    });
+    
   });
+
+  // Load initial tweets
   loadTweets();
 });
