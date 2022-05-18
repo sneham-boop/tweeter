@@ -22,6 +22,8 @@
   padding: 20px 0px 0px 0px;
   font-size: 18px;
   font-weight: 600;
+  word-wrap: break-word;
+  word-break:keep-all;
 }
 
 #tweet-text:focus {
@@ -52,4 +54,10 @@
 
 .text-color-red {
   color: red;
+}
+
+#alert-user {
+  margin: 0px;
+  color: red;
+  font-weight: bold;
 }

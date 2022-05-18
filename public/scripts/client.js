@@ -5,7 +5,6 @@
  */
 
 $(document).ready(() => {
-
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -17,7 +16,7 @@ $(document).ready(() => {
     const user = tweetData.user;
     const tweetText = tweetData.content.text;
     const tweetTextSafe = escape(tweetText);
-    
+
     const time = tweetData.created_at;
 
     const $tweetElement = `
@@ -41,8 +40,8 @@ $(document).ready(() => {
     </article>`;
     return $tweetElement;
   };
-  
-  // Render all tweets 
+
+  // Render all tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -51,7 +50,7 @@ $(document).ready(() => {
     }
   };
 
-  // Get all existing tweets from db
+  // Get all existing tweets 
   const loadTweets = () => {
     $.getJSON("/tweets").done(function (tweets) {
       // Remove old dataset and replace with newest
@@ -61,23 +60,34 @@ $(document).ready(() => {
   };
 
   // New tweet
-  $(".tweet-form").on("submit", function (event) {
+  $(".tweet-form").submit(function (event) {
     event.preventDefault();
     const data = $(this).serialize();
+    
+    // Tweet validation
+    const alertUser = "#alert-user";
+    $(alertUser).hide();
+    if (data.length <= 5) {
+      $(alertUser).slideDown(1000).text("Enter a tweet!");
+      return;
+    }
 
-    // Validation
-    if(data.length <= 5) return alert("There was no tweet entered. Enter something!");
-    if(data.length > 145) return alert("This string is too long. Shorten to 140 characters.");
+    if (data.length > 145) {
+      $(alertUser)
+        .text("This string is too long. Shorten to 140 characters.")
+        .slideDown(1000);
+      return;
+    }
 
+    // Tweet good to post
     $.post("/tweets", data).done(() => {
       loadTweets();
 
       // Reset tweet form
       const counter = "#tweet-text + div output";
-      $("#tweet-text").val(""); 
+      $("#tweet-text").val("");
       $(counter).text("140");
     });
-    
   });
 
   // Load initial tweets

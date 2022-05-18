@@ -1,26 +1,26 @@
 .nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056a1;
+  /* background-color: #4056a1; */
+  background-color: #545149;
   color: #ffffff;
   padding: 0 1.5em 0 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; 
-  top: 0px; 
+  position: fixed;
+  top: 0px;
 }
 
 #nav-heading-text {
   font-family: "Bungee", sans-serif;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .links {
   color: #ffffff;
   padding-top: 10px;
 }
-
 
 .nav-items {
   display: flex;
@@ -31,5 +31,3 @@
 .nav-items p {
   margin: 0px;
 }
-
-
