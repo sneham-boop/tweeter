@@ -6,10 +6,18 @@
 
 $(document).ready(() => {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Create tweet container html
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
-    const content = tweetData.content;
+    const tweetText = tweetData.content.text;
+    const tweetTextSafe = escape(tweetText);
+    
     const time = tweetData.created_at;
 
     const $tweetElement = `
@@ -21,7 +29,7 @@ $(document).ready(() => {
         </div>
         <p class="user-id bold">${user.handle}</p>
       </header>
-      <p class="tweet-text-log bold">${content.text}</p>
+      <p class="tweet-text-log bold">${tweetTextSafe}</p>
       <footer>
         <time class="bold">${timeago.format(time)}</time>
         <div class="interaction-icons-container">
@@ -34,10 +42,11 @@ $(document).ready(() => {
     return $tweetElement;
   };
   
-  // Render all tweets
+  // Render all tweets 
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
+      const content = tweet.content;
       $("#tweets-container").prepend($tweet);
     }
   };
