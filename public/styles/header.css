@@ -1,8 +1,8 @@
 #header {
   height: 400px;
   width: 100vw;
-  background-color: rgb(92, 67, 82);
-  background-image: url("../images/basketball.png");
+  background-color: #d4a71e;
+  background-image: url("../images/concrete-wall.png");
   color: white;
   display: flex;
   flex-direction: column;
