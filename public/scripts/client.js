@@ -50,7 +50,7 @@ $(document).ready(() => {
     }
   };
 
-  // Get all existing tweets 
+  // Get all existing tweets
   const loadTweets = () => {
     $.getJSON("/tweets").done(function (tweets) {
       // Remove old dataset and replace with newest
@@ -59,20 +59,36 @@ $(document).ready(() => {
     });
   };
 
+  // Calculate true tweet length ignoring URL-encoded notation 
+  // from serializing the data.
+  const getLength = (data) => {
+    if (data === "text=") return 0;
+
+    const regex = /(%\w\w)/gi;
+    const filteredData = data.match(regex);
+
+    // Substract 2* the filtered data length to only account
+    // for each special character 1 time.
+    // Substract 5 for "text=" in the .serialize() response.
+    const length = data.length - 2 * filteredData.length - 5;
+    return length;
+  };
+
   // New tweet
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
     const data = $(this).serialize();
-    
+    const length = getLength(data);
+
     // Tweet validation
     const alertUser = "#alert-user";
     $(alertUser).hide();
-    if (data.length <= 5) {
+    if (length === 0) {
       $(alertUser).slideDown(1000).text("Enter a tweet!");
       return;
     }
 
-    if (data.length > 145) {
+    if (length > 140) {
       $(alertUser)
         .text("This string is too long. Shorten to 140 characters.")
         .slideDown(1000);
