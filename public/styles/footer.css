@@ -22,6 +22,7 @@
   position:fixed;
   bottom: 15px;
   opacity: 50%;
+  display: none;
 }
 
 #footer a:hover {
