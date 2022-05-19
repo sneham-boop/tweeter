@@ -1,8 +1,7 @@
 .nav {
   height: 120px;
   width: 100vw;
-  /* background-color: #4056a1; */
-  background-color: #545149;
+  background-color: #4056a1;
   color: #ffffff;
   padding: 0 1.5em 0 1.5em;
   display: flex;
@@ -17,17 +16,22 @@
   font-size: 45px;
 }
 
-.links {
-  color: #ffffff;
+.nav-items p {
+  margin: 0px;
+}
+
+.nav-items i {
   padding-top: 10px;
 }
 
-.nav-items {
+.links {
+  color: #ffffff;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.nav-items p {
-  margin: 0px;
+.links:hover {
+  color: #d4a71e;
 }
