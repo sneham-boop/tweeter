@@ -45,7 +45,6 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      const content = tweet.content;
       $("#tweets-container").prepend($tweet);
     }
   };
@@ -59,7 +58,7 @@ $(document).ready(() => {
     });
   };
 
-  // Calculate true tweet length ignoring URL-encoded notation 
+  // Calculate true tweet length ignoring URL-encoded notation
   // from serializing the data.
   const getLength = (data) => {
     if (data === "text=") return 0;
