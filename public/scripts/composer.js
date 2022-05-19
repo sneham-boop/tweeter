@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // Scroll up button on footer
   $(window).scroll(() => {
     let scrollPosition = $(window).scrollTop();
@@ -9,10 +8,18 @@ $(document).ready(function () {
     }
   });
 
-  // Scroll up and focus on tweet text when up 
+  // Scroll up and focus on tweet text when up
   // button is pressed.
-  $("#footer a").click(()=>{
+  $("#footer a").click(() => {
     $(window).scrollTop(200);
+    $(".new-tweet").show(200);
     $("#tweet-text").focus();
-  })
+  });
+
+  //
+  $(".nav-items a").click(() => {
+    $(".new-tweet").slideToggle(200, "linear", () => {
+      $("#tweet-text").focus();
+    });
+  });
 });
