@@ -60,4 +60,10 @@
   margin: 0px;
   color: red;
   font-weight: bold;
+  border: red solid 1px;
+  border-radius: 10px;
+  padding: 0.5em 10px 0px 10px;
+  text-align: center;
+  font-size: 18px;
+  display: none;
 }

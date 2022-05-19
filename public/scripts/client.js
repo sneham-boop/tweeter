@@ -65,7 +65,7 @@ $(document).ready(() => {
     if (data === "text=") return 0;
 
     const regex = /(%\w\w)/gi;
-    const filteredData = data.match(regex);
+    const filteredData = data.match(regex) || [];
 
     // Substract 2* the filtered data length to only account
     // for each special character 1 time.
@@ -84,13 +84,13 @@ $(document).ready(() => {
     const alertUser = "#alert-user";
     $(alertUser).hide();
     if (length === 0) {
-      $(alertUser).slideDown(1000).text("Enter a tweet!");
+      $(alertUser).slideDown(1000).text("Alert: Enter a tweet!");
       return;
     }
 
     if (length > 140) {
       $(alertUser)
-        .text("This string is too long. Shorten to 140 characters.")
+        .text("Alert: This string is too long. Shorten to 140 characters.")
         .slideDown(1000);
       return;
     }
