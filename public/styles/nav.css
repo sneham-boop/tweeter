@@ -33,5 +33,9 @@
 }
 
 .links:hover {
-  color: #d4a71e;
+  color: #ff5a08;
+}
+
+#nav-text {
+  color: #ffffff;
 }
