@@ -16,7 +16,6 @@ $(document).ready(() => {
     const user = tweetData.user;
     const tweetText = tweetData.content.text;
     const tweetTextSafe = escape(tweetText);
-
     const time = tweetData.created_at;
 
     const $tweetElement = `
@@ -52,55 +51,48 @@ $(document).ready(() => {
   // Get all existing tweets
   const loadTweets = () => {
     $.getJSON("/tweets").done(function (tweets) {
-      // Remove old dataset and replace with newest
+      // Replace old dataset with new
       $("#tweets-container").empty();
       renderTweets(tweets);
     });
   };
 
-  // Calculate true tweet length ignoring URL-encoded notation
-  // from serializing the data.
-  const getLength = (data) => {
-    if (data === "text=") return 0;
-
-    const regex = /(%\w\w)/gi;
-    const filteredData = data.match(regex) || [];
-
-    // Substract 2* the filtered data length to only account
-    // for each special character 1 time.
-    // Substract 5 for "text=" in the .serialize() response.
-    const length = data.length - 2 * filteredData.length - 5;
-    return length;
+  // Tweet validation
+  const validateTweet = (tweetLength) => {
+    const alertUser = "#alert-user";
+    $(alertUser).hide();
+    if (tweetLength === 0) {
+      $(alertUser).slideDown(500).text("Alert: Enter a tweet!");
+      return false;
+    }
+    if (tweetLength > 140) {
+      $(alertUser)
+        .text("Alert: This string is too long. Shorten to 140 characters.")
+        .slideDown(500);
+      return false;
+    }
+    return true;
   };
 
   // New tweet
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
-    const data = $(this).serialize();
-    const length = getLength(data);
 
-    // Tweet validation
-    const alertUser = "#alert-user";
-    $(alertUser).hide();
-    if (length === 0) {
-      $(alertUser).slideDown(1000).text("Alert: Enter a tweet!");
-      return;
-    }
+    const serializedData = $(this).serialize();
+    const tweetText = $("#tweet-text").val();
+    const tweetLength = tweetText.length;
 
-    if (length > 140) {
-      $(alertUser)
-        .text("Alert: This string is too long. Shorten to 140 characters.")
-        .slideDown(1000);
-      return;
-    }
+    // Error checking
+    const valid = validateTweet(tweetLength);
+    if (!valid) return;
 
-    // Tweet good to post
-    $.post("/tweets", data).done(() => {
+    // Post tweet
+    $.post("/tweets", serializedData).done(() => {
       loadTweets();
 
       // Reset tweet form
       const counter = "#tweet-text + div output";
-      $("#tweet-text").val("");
+      $("#tweet-text").val("").focus();
       $(counter).text("140");
     });
   });
