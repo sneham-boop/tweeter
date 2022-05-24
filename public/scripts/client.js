@@ -59,7 +59,7 @@ $(document).ready(() => {
 
   // Tweet validation
   const validateTweet = (tweetLength) => {
-    const alertUser = "#alert-user";
+    const alertUser = ".tweet-form-alert";
     $(alertUser).hide();
     if (tweetLength === 0) {
       $(alertUser).slideDown(500).text("Alert: Enter a tweet!");

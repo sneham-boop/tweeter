@@ -52,7 +52,7 @@
   background-color: #d4a71e;
 }
 
-#tweet-question{
+form label {
   font-size: 18px;
 }
 
@@ -60,7 +60,7 @@
   color: red;
 }
 
-#alert-user {
+.tweet-form-alert {
   margin: 0px;
   color: red;
   font-weight: bold;

@@ -2,30 +2,40 @@
   width: 100%;
   height: 90px;
   display: flex;
-  justify-content:end;
+  justify-content: end;
   align-items: center;
 }
 
 #footer a {
+  font-family: "Bungee", sans-serif;
   text-decoration: none;
   text-align: center;
   background-color: #4056a1;
+  opacity: 70%;
   color: white;
-  border: none;
-  padding: 16px 0px 0px 0px;
   width: 60px;
   height: 60px;
-  font-family: "Bungee", sans-serif;
+  border: none;
   border-radius: 50%;
-  transition: 0.4s;
+  padding: 16px 0px 0px 0px;
   margin-right: 5px;
-  position:fixed;
+  position: fixed;
   bottom: 15px;
-  opacity: 70%;
   display: none;
+  transition: 0.4s;
 }
 
 #footer a:hover {
   background-color: #d4a71e;
   opacity: 100%;
 }
+
+/* @media only screen and (min-width: 800px) {
+  #footer {
+    /* flex-grow: 1; */
+    /* grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+} */ 

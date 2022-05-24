@@ -1,3 +1,9 @@
+.container {
+  background-color: #f7f5f0;
+  margin-top: 40px;
+  width: 90%;
+}
+
 .single-tweet {
   margin-top: 20px;
   padding: 20px 20px 10px 20px;
@@ -49,6 +55,7 @@
 .interaction-icons-container a {
   color: #4056a1;
 }
+
 .flag-icon:hover,
 .retweet-icon:hover,
 .heart-icon:hover {
