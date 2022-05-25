@@ -1,5 +1,6 @@
 .new-tweet{
   display: none;
+  margin-bottom: 20px;
 }
 
 .tweet-form {

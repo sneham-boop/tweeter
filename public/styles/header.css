@@ -19,13 +19,9 @@
   margin: 10px 0px 20px 0px;
 }
 
-/* @media only screen and (min-width: 800px) {
-  #header {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 6;
-    width:300px;
-    height: 300px;
-  }
-} */
+@media only screen and (min-width: 1024px) {
+ .main-header {
+   width: 30vw;
+   height: 300px;
+ }
+}

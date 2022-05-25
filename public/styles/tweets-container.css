@@ -5,7 +5,7 @@
 }
 
 .single-tweet {
-  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px 20px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -69,4 +69,11 @@
 
 time {
   font-size: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 50vw;
+    margin: 0 0 0 10vw;
+  }
 }

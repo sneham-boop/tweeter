@@ -42,10 +42,8 @@
 
 /* Media queries */
 
-/* @media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .nav {
     background-color: #4056a1;
-    grid-column-start: 1;
-    grid-column-end: 11;
   }
-} */
+}

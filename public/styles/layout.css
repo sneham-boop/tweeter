@@ -31,6 +31,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.header-main-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
 .bold {
   font-weight: 600;
@@ -38,17 +43,10 @@ body {
 
 /* Media queries */
 
-/* @media only screen and (min-width: 800px) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 10%);
+@media only screen and (min-width: 1024px) {
+  .header-main-container {
+  flex-direction: row;
+  align-items: start;
+  margin: 8em 5em 0em 5em;
   }
-
-  .container {
-  grid-column-start: 4;
-  grid-column-end: 11;
-  grid-row-start: 2;
-  grid-row-end: 6;
-  }
-} */
+}
