@@ -23,6 +23,10 @@
   color: #ffffff;
 }
 
+.small-screen-show{
+  display: none;
+}
+
 .nav-items i {
   padding-top: 10px;
 }
@@ -41,6 +45,21 @@
 }
 
 /* Media queries */
+
+@media only screen and (max-width: 667px) {
+  .nav h1 {
+    font-family: "Bungee", sans-serif;
+    font-size: 35px;
+  }
+
+  .nav-items p {
+    display: none;
+  }
+
+  .small-screen-show{
+    display: initial;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .nav {
