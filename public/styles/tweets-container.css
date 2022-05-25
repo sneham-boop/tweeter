@@ -11,6 +11,7 @@
   flex-direction: column;
   border: 3px solid;
   font-size: 18px;
+  border-radius: 10px;
 }
 
 .single-tweet header,
@@ -49,7 +50,6 @@
   border-bottom: 3px solid #545149;
   padding-bottom: 10px;
   word-wrap: break-word;
-  /* word-break:keep-all; */
 }
 
 .interaction-icons-container a {
@@ -74,6 +74,11 @@ time {
 @media only screen and (max-width: 667px) {
   .single-tweet {
     font-size: 15px;
+    border: 2px solid;
+  }
+
+  .tweet-text-log {
+    border-bottom: 2px solid #545149;
   }
 }
 

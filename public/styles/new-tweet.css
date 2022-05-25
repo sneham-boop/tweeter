@@ -36,7 +36,7 @@
   overflow: hidden;
 }
 
-.counter, .tweet-button {
+.char-counter, .tweet-button {
   font-family: "Bungee", sans-serif;
 }
 
@@ -62,7 +62,7 @@ form label {
 }
 
 .tweet-form-alert {
-  margin: 0px;
+  margin: 0px 0.5em 0px 0.5em;
   color: red;
   font-weight: bold;
   border: red solid 1px;
@@ -71,4 +71,15 @@ form label {
   text-align: center;
   font-size: 18px;
   display: none;
+}
+
+@media only screen and (max-width: 667px) {
+  #tweet-text {
+    font-size: 15px;
+    border-bottom: 2px solid;
+  }
+
+  form label {
+    font-size: 15px;
+  }
 }

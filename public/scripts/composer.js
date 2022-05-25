@@ -2,10 +2,12 @@ $(document).ready(function () {
   // Scroll up button on footer
   $(window).scroll(() => {
     let scrollPosition = $(window).scrollTop();
-    $("#footer a").show();
-    if (scrollPosition < 70) {
-      $("#footer a").hide();
-    }
+    
+    if (scrollPosition < 70) $("#footer a").hide();
+    else $("#footer a").show();
+
+    // if (scrollPosition > 373) $(".nav").fadeOut("fast");
+    // else $(".nav").show();
   });
 
   // Scroll up and focus on tweet text when up

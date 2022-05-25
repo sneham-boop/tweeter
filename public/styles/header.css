@@ -21,7 +21,11 @@
 
 @media only screen and (max-width: 667px) {
   .main-header img {
-    height: 175px;
+    height: 100px;
+  }
+
+  .main-header {
+    height: 250px;
   }
 }
 
@@ -29,5 +33,6 @@
  .main-header {
    width: 30vw;
    height: 300px;
+   border-radius: 10px;
  }
 }

@@ -45,32 +45,34 @@
     <h1 class="nav-items">tweeter</h1>
     <div class="nav-items">
       <a href="#">
-      <p><span class="bold">Write</span> a new tweet</p>
-      <span class="small-screen-show">Tweet</span><i class="fa-solid fa-angles-down fa-bounce"></i></a>
+        <p><span class="bold">Write</span> a new tweet</p>
+        <span class="small-screen-show">Tweet</span>
+        <i class="fa-solid fa-angles-down fa-bounce"></i>
+      </a>
     </div>
   </nav>
   <div class="header-main-container">
-  <header class="main-header">
-    <img src="/images/profile-hex.png">
-    <p><span class="bold">Sneha </span>Mahajan</p>
-  </header>
+    <header class="main-header">
+      <img src="/images/profile-hex.png">
+      <p><span class="bold">Sneha </span>Mahajan</p>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form class="tweet-form">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="button-counter-container">
-          <button class="tweet-button" type="submit">Tweet</button>
-          <p class="tweet-form-alert"></p>
-          <output class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section id="tweets-container"></section>
-  </main>
-</div>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <form class="tweet-form">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="button-counter-container">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <p class="tweet-form-alert"></p>
+            <output class="char-counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section id="tweets-container"></section>
+    </main>
+  </div>
   <footer id="footer">
     <a href="#">Up</a>
   </footer>
