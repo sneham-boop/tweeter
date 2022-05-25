@@ -14,7 +14,7 @@
   height: 200px;
 }
 
-.main-header p{
+.main-header p {
   font-size: 30px;
   margin: 10px 0px 20px 0px;
 }
@@ -30,9 +30,9 @@
 }
 
 @media only screen and (min-width: 1024px) {
- .main-header {
-   width: 30vw;
-   height: 300px;
-   border-radius: 10px;
- }
+  .main-header {
+    width: 30vw;
+    height: 300px;
+    border-radius: 10px;
+  }
 }

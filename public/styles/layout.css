@@ -32,9 +32,9 @@ body {
  */
 
 .header-main-container {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bold {
@@ -45,8 +45,8 @@ align-items: center;
 
 @media only screen and (min-width: 1024px) {
   .header-main-container {
-  flex-direction: row;
-  align-items: start;
-  margin: 8em 5em 0em 5em;
+    flex-direction: row;
+    align-items: start;
+    margin: 8em 5em 0em 5em;
   }
 }

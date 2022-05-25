@@ -1,4 +1,4 @@
-.new-tweet{
+.new-tweet {
   display: none;
   margin-bottom: 20px;
 }
@@ -28,7 +28,7 @@
   font-size: 18px;
   font-weight: 600;
   word-wrap: break-word;
-  word-break:keep-all;
+  word-break: keep-all;
 }
 
 #tweet-text:focus {
@@ -36,7 +36,8 @@
   overflow: hidden;
 }
 
-.char-counter, .tweet-button {
+.char-counter,
+.tweet-button {
   font-family: "Bungee", sans-serif;
 }
 
