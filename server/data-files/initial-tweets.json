@@ -6,9 +6,9 @@
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Never trust a computer you can’t throw out a window. (Steve Wozniak)"
     },
-    "created_at": 1653152081227
+    "created_at": 1653157137384
   },
   {
     "user": {
@@ -17,30 +17,30 @@
       "handle": "@rd"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "There are two ways to write error-free programs; only the third one works. (Alan J. Perlis)"
     },
-    "created_at": 1653238481227
+    "created_at": 1653243537384
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Minnie Mouse",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@mm"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "First, solve the problem. Then, write the code. (John Johnson)"
     },
-    "created_at": 1653324881227
+    "created_at": 1653329937384
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Codey",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@someCoder"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "The function of good software is to make the complex appear to be simple. (Grady Booch)"
     },
-    "created_at": 1653411281227
+    "created_at": 1653416337384
   }
 ]
