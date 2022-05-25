@@ -2,7 +2,6 @@ $(document).ready(function () {
   // Scroll up button on footer
   $(window).scroll(() => {
     let scrollPosition = $(window).scrollTop();
-
     if (scrollPosition < 70) $("#footer a").hide();
     else $("#footer a").show();
   });
