@@ -1,12 +1,13 @@
 $(document).ready(function () {
-  // Scroll up button on footer
+  
+  // Detect screen scrolling
   $(window).scroll(() => {
     let scrollPosition = $(window).scrollTop();
     if (scrollPosition < 70) $("#footer a").hide();
     else $("#footer a").show();
   });
 
-  // Scroll up and focus on tweet text when up
+  // Scroll up and focus on tweet form when "up"
   // button is pressed.
   $("#footer a").click(() => {
     $(window).scrollTop(200);
@@ -14,7 +15,7 @@ $(document).ready(function () {
     $("#tweet-text").focus();
   });
 
-  // Begin writing tweet when double arrow pressed
+  // Focus on tweet form when double bouncy arrow is pressed
   $(".nav-items a").click(() => {
     $(".new-tweet").slideToggle(200, "linear", () => {
       $("#tweet-text").focus();

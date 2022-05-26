@@ -5,13 +5,17 @@
  */
 
 $(document).ready(() => {
+  
+  // Function imaplementation for preventing 
+  // cross-site scripting
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  // Create tweet container html
+  // Function implementation to create html 
+  // for single tweet container
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const tweetText = tweetData.content.text;
@@ -40,7 +44,7 @@ $(document).ready(() => {
     return $tweetElement;
   };
 
-  // Render all tweets
+  // Function implementation to render all tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -48,16 +52,16 @@ $(document).ready(() => {
     }
   };
 
-  // Get all existing tweets
+  // Function implementation to get all existing tweets
   const loadTweets = () => {
     $.getJSON("/tweets").done(function (tweets) {
-      // Replace old dataset with new
+      // Refresh tweets
       $("#tweets-container").empty();
       renderTweets(tweets);
     });
   };
 
-  // Tweet validation
+  // Function implementation for tweet validation
   const validateTweet = (tweetLength, tweetData) => {
     const alertUser = ".tweet-form-alert";
     let alertText = "";
@@ -81,7 +85,7 @@ $(document).ready(() => {
     return true;
   };
 
-  // New tweet
+  // Submit new tweet
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
