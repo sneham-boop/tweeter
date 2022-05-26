@@ -60,14 +60,14 @@ form label {
 }
 
 .text-color-red {
-  color: red;
+  color: rgb(254, 71, 38);
 }
 
 .tweet-form-alert {
   margin: 0px 0.5em 0px 0.5em;
-  color: red;
+  color: rgb(254, 71, 38);
   font-weight: bold;
-  border: red solid 1px;
+  border: rgb(254, 71, 38) solid 1px;
   border-radius: 10px;
   padding: 0.5em 10px 0px 10px;
   text-align: center;
