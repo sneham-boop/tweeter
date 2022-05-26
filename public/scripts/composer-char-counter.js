@@ -3,10 +3,10 @@ $(document).ready(() => {
   $("#tweet-text").keyup(function () {
     const typedText = $(this).val();
     const numChars = 140 - typedText.length;
-    const counter = "#tweet-text + div output";
+    const charCounter = "#tweet-text + div output";
 
-    $(counter).text(numChars);
-    if (numChars < 0) $(counter).addClass("text-color-red");
-    else $(counter).removeClass("text-color-red");
+    $(charCounter).text(numChars);
+    if (numChars < 0) $(charCounter).addClass("text-color-red");
+    else $(charCounter).removeClass("text-color-red");
   });
 });

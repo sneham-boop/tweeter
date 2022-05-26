@@ -58,17 +58,24 @@ $(document).ready(() => {
   };
 
   // Tweet validation
-  const validateTweet = (tweetLength) => {
+  const validateTweet = (tweetLength, tweetData) => {
     const alertUser = ".tweet-form-alert";
+    let alertText = "";
     $(alertUser).hide();
-    if (tweetLength === 0) {
-      $(alertUser).slideDown(500).text("Alert: Enter a tweet!");
-      return false;
-    }
-    if (tweetLength > 140) {
-      $(alertUser)
-        .text("Alert: This string is too long. Shorten to 140 characters.")
-        .slideDown(500);
+    // Condition 1 - Empty
+    if (tweetLength === 0) alertText = "Alert: Enter a tweet!";
+
+    // Condition 2 - Too long
+    if (tweetLength > 140)
+      alertText = "Alert: Shorten tweet to 140 characters.";
+
+    // Condition 3 - Only spaces
+    const withoutSpaces = tweetData.replace(/%20/gi, "");
+    if (tweetLength > 0 && withoutSpaces.length === 5)
+      alertText = "Alert: Enter something else except for spaces.";
+
+    if (alertText.length > 0) {
+      $(alertUser).text(alertText).fadeIn(500);
       return false;
     }
     return true;
@@ -78,22 +85,22 @@ $(document).ready(() => {
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
 
-    const serializedData = $(this).serialize();
+    const tweetData = $(this).serialize();
     const tweetText = $("#tweet-text").val();
     const tweetLength = tweetText.length;
 
     // Error checking
-    const valid = validateTweet(tweetLength);
+    const valid = validateTweet(tweetLength, tweetData);
     if (!valid) return;
 
     // Post tweet
-    $.post("/tweets", serializedData).done(() => {
+    $.post("/tweets", tweetData).done(() => {
       loadTweets();
 
       // Reset tweet form
-      const counter = "#tweet-text + div output";
-      $("#tweet-text").val("").focus();
-      $(counter).text("140");
+      const charCounter = "#tweet-text + div output";
+      $("#tweet-text").val("");
+      $(charCounter).text("140");
     });
   });
 

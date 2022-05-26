@@ -8,7 +8,7 @@
     "content": {
       "text": "Never trust a computer you can’t throw out a window. (Steve Wozniak)"
     },
-    "created_at": 1653151916371
+    "created_at": 1653154152491
   },
   {
     "user": {
@@ -19,7 +19,7 @@
     "content": {
       "text": "There are two ways to write error-free programs; only the third one works. (Alan J. Perlis)"
     },
-    "created_at": 1653238316371
+    "created_at": 1653240552491
   },
   {
     "user": {
@@ -30,7 +30,7 @@
     "content": {
       "text": "First, solve the problem. Then, write the code. (John Johnson)"
     },
-    "created_at": 1653324716371
+    "created_at": 1653326952491
   },
   {
     "user": {
@@ -41,7 +41,7 @@
     "content": {
       "text": "The function of good software is to make the complex appear to be simple. (Grady Booch)"
     },
-    "created_at": 1653411116371
+    "created_at": 1653413352491
   },
   {
     "user": {
@@ -52,6 +52,6 @@
     "content": {
       "text": "Hardware: The parts of a computer system that can be kicked. (Jeff Pesis)"
     },
-    "created_at": 1653497516371
+    "created_at": 1653499752491
   }
 ]
