@@ -32,8 +32,8 @@ Tweeter is a simple, single-page AJAX based Twitter clone. HTML, CSS3 and JQuery
 3. Go to <http://localhost:8080/> in your browser.
 4. Tweet form slides down by clicking on the bouncy white arrows and user can directly start typing their tweet.
 5. Tweets cannot exceed **140** characters and cannot be **empty**. User will be alerted if these conditions are not met.
-6. Scroll down to see existing tweets in the static database. 
-7. Scroll up by clicking the up button on the bottom of the screen.
+6. Scroll down to see existing tweets in the database. 
+7. Scroll all the way up by clicking the up button on the bottom of the screen.
 
 
 
