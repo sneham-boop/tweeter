@@ -1,3 +1,53 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f7f5f0;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+.header-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Media queries */
+@media only screen and (min-width: 1024px) {
+  .header-main-container {
+    flex-direction: row;
+    align-items: start;
+    margin: 8em 5em 0em 5em;
+  }
+}
 .container {
   background-color: #f7f5f0;
   margin-top: 40px;
@@ -45,6 +95,10 @@
   color: rgb(181, 181, 181);
 }
 
+.user-id:hover {
+  color: #545149;
+}
+
 .tweet-text-log {
   margin: 20px 0px 5px 0px;
   border-bottom: 3px solid #545149;
@@ -59,7 +113,7 @@
 .flag-icon:hover,
 .retweet-icon:hover,
 .heart-icon:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(254, 71, 38);
 }
 
 .flag-icon:hover,
@@ -81,7 +135,6 @@ time {
     border-bottom: 2px solid #545149;
   }
 }
-
 @media only screen and (min-width: 1024px) {
   .container {
     width: 50vw;

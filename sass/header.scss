@@ -1,0 +1,38 @@
+// // Sass variables/mixins import
+@import "./layout.scss";
+
+.main-header {
+  height: 400px;
+  width: 100vw;
+  background-color: $orange-color;
+  background-image: url("../images/concrete-wall.png");
+  color: white;
+  @include center-vertical($justifyContent: end);
+}
+
+.main-header img {
+  height: 200px;
+}
+
+.main-header p {
+  font-size: 30px;
+  margin: 10px 0px 20px 0px;
+}
+
+@media only screen and (max-width: 667px) {
+  .main-header img {
+    height: 100px;
+  }
+
+  .main-header {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    width: 30vw;
+    height: 300px;
+    border-radius: 10px;
+  }
+}

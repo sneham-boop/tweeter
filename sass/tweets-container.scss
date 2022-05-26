@@ -1,0 +1,97 @@
+// // Sass variables/mixins import
+@import "./layout.scss";
+
+.container {
+  background-color: $cream-light-color;
+  margin-top: 40px;
+  width: 90vw;
+}
+
+.single-tweet {
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  font-size: $medium-font-size;
+  border-radius: 10px;
+}
+
+.single-tweet header,
+.single-tweet footer,
+.single-tweet p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+.single-tweet img {
+  width: 2em;
+  margin-right: 15px;
+}
+
+.single-tweet footer {
+  padding: 0px 10px 0px 10px;
+}
+
+.single-tweet:hover {
+  box-shadow: 7px 7px $shadow-gray-color;
+}
+
+.user-id {
+  margin: 0px;
+  color: $user-id-gray-color;
+}
+
+.user-id:hover {
+  color: $dark-gray-color;
+}
+
+.tweet-text-log {
+  margin: 20px 0px 5px 0px;
+  border-bottom: 3px solid $dark-gray-color;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.interaction-icons-container a {
+  color: $blue-color;
+}
+
+.flag-icon:hover,
+.retweet-icon:hover,
+.heart-icon:hover {
+  color: $alert-red-color;
+}
+
+.flag-icon:hover,
+.retweet-icon:hover {
+  color: $orange-color;
+}
+
+time {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 667px) {
+  .single-tweet {
+    font-size: $small-font-size;
+    border: 2px solid;
+  }
+
+  .tweet-text-log {
+    border-bottom: 2px solid $dark-gray-color;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 50vw;
+    margin: 0 0 0 10vw;
+  }
+}

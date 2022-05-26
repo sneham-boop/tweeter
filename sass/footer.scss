@@ -1,0 +1,35 @@
+// // Sass variables/mixins import
+@import "./layout.scss";
+
+#footer {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: -20px;
+}
+
+#footer a {
+  font-family: "Bungee", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  background-color: $blue-color;
+  opacity: 70%;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  padding: 16px 0px 0px 0px;
+  margin-right: 5px;
+  position: fixed;
+  bottom: 15px;
+  display: none;
+  transition: 0.4s;
+}
+
+#footer a:hover {
+  background-color: $orange-color;
+  opacity: 100%;
+}

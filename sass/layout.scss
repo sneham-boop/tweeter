@@ -6,16 +6,35 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
+// Sass variables
+$medium-font-size: 18px;
+$small-font-size: 15px;
+$blue-color: #4056a1;
+$dark-gray-color: #545149;
+$cream-light-color: #f7f5f0;
+$orange-color: #d4a71e;
+$alert-red-color: rgb(254, 71, 38);
+$shadow-gray-color: gainsboro;
+$user-id-gray-color: rgb(181, 181, 181);
+
+// Sass mixins
+@mixin center-vertical($justifyContent: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justifyContent;
+}
+
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f7f5f0;
@@ -30,6 +49,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 .header-main-container {
   display: flex;
   flex-direction: column;
@@ -41,42 +61,11 @@ body {
 }
 
 /* Media queries */
+
 @media only screen and (min-width: 1024px) {
   .header-main-container {
     flex-direction: row;
     align-items: start;
     margin: 8em 5em 0em 5em;
   }
-}
-#footer {
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-top: -20px;
-}
-
-#footer a {
-  font-family: "Bungee", sans-serif;
-  text-decoration: none;
-  text-align: center;
-  background-color: #4056a1;
-  opacity: 70%;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border: none;
-  border-radius: 50%;
-  padding: 16px 0px 0px 0px;
-  margin-right: 5px;
-  position: fixed;
-  bottom: 15px;
-  display: none;
-  transition: 0.4s;
-}
-
-#footer a:hover {
-  background-color: #d4a71e;
-  opacity: 100%;
 }

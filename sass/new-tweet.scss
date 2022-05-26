@@ -1,0 +1,90 @@
+// // Sass variables/mixins import
+@import "./layout.scss";
+
+.new-tweet {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-counter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  border-bottom: 3px solid $dark-gray-color;
+  color: $dark-gray-color;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  background-color: $cream-light-color;
+  resize: none;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 20px 0px 0px 0px;
+  font-size: $medium-font-size;
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+#tweet-text:focus {
+  outline: none;
+  overflow: hidden;
+}
+
+.char-counter,
+.tweet-button {
+  font-family: "Bungee", sans-serif;
+}
+
+.tweet-button {
+  background-color: $blue-color;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.tweet-button:hover {
+  background-color: $orange-color;
+}
+
+form label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-color-red {
+  color: $alert-red-color;
+}
+
+.tweet-form-alert {
+  margin: 0px 0.5em 0px 0.5em;
+  color: $alert-red-color;
+  font-weight: bold;
+  border: $alert-red-color solid 1px;
+  border-radius: 10px;
+  padding: 0.5em 10px 0px 10px;
+  text-align: center;
+  font-size: 18px;
+  display: none;
+}
+
+@media only screen and (max-width: 667px) {
+  #tweet-text {
+    font-size: $small-font-size;
+    border-bottom: 2px solid;
+  }
+
+  form label {
+    font-size: 15px;
+  }
+}
